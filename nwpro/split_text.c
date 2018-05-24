@@ -4,30 +4,27 @@
 #define MAXWORDS 32
 #define MAXCHARS 6
 
-char *charSpritter(char *text){
-    int i, charCount, wordCount;
+int main(void){
+    char text[MAXSIZE] = "It is good to see you. Thank you for Coming.";
     char result[MAXWORDS][MAXCHARS];
-    printf("%c\n", text[42]);
+    int i, charCount, wordCount;
     
     i = 0, wordCount = 0, charCount = 0;
     while(text[i] != '\0'){
-        if(text[i] != ' ' || text[i] != '.'){
-            result[wordCount][charCount] = text[i];
-            charCount++;
-        } else {
-            // TODO: NULL代入
+        if(!i) printf("[\"");
+        if(text[i] == ' ' || text[i] == '.'){
+            printf("\"]");
+            result[wordCount][charCount] = '\0';
             charCount = 0;
             wordCount++;
+            if(text[i+1] != '\0') printf("[\"");
+        } else {
+            printf("\x1b[36m%c\x1b[39m", text[i]);
+            result[wordCount][charCount] = text[i];
+            charCount++;
         }
         i++;
     }
-    printf("%c\n", result[0][2]);
-
-    return text;
-}
-
-int main(void){
-    char text[MAXSIZE] = "It is good to see you. Thank you for Coming.";
-    charSpritter(text);
+    printf("\n");
     return 0;
 }
