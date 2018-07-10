@@ -23,11 +23,11 @@ int linear(int data[], int size, int n){
     int i = 0;
 
     while(1){
-        if(data[i] == n){
-            ans = i;
-            break;
-        } else if(i > size) {
+        if(i >= size) {
             ans = -1;
+            break;
+        } else if(data[i] == n){
+            ans = i;
             break;
         }
         i++;
