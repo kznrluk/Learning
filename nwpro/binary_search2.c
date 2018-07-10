@@ -18,29 +18,24 @@ int main(void) {
 
     return 0;
 }
-
+        
 int binary(int data[], int size, int n){
     int ans = -1;
     int m = 0;
-    int left = 0, right = size;
+    int left = 0;
+    int right = size - 1;
 
-    while(1){
+
+    int count = 0;
+    while(left <= right){
         m = (right + left) / 2;
         if(data[m] == n){
             ans = m;
             break;
-        } else if (data[m] < n) {
-            if(m == left){
-                ans = -1;
-                break;
-            }
-            left = m;
+        } else if (data[m] <= n) {
+            left = m + 1;
         } else {
-            if(m == right){
-                ans = -1;
-                break;
-            }
-            right = m;
+            right = m - 1;
         }
     }
 
