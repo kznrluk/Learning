@@ -50,7 +50,7 @@ float linear(struct gakusei ns_2nen[], int n){
             ans = -1;
             break;
         } else if(ns_2nen[i].gakuban == n){
-            ans = i;
+            ans = ns_2nen[i].heikin;
             break;
         }
         i++;
