@@ -43,9 +43,9 @@ void output(int n, int ans){
     }
 }
 
-// [fid@Thinkpad nwpro]$ gcc linear_search2.c && ./a.out
+// s1732070@mv11c:~> gcc linear_search2.c && ./a.out
 // Search Number?:3
 // output: 3 is found in data[0]
-// [fid@Thinkpad nwpro]$ gcc linear_search2.c && ./a.out
+// s1732070@mv11c:~> gcc linear_search2.c && ./a.out
 // Search Number?:10
 // output: 10 is not found.

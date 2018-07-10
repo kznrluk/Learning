@@ -55,9 +55,9 @@ void output(int n, int ans){
     }
 }
 
-// [fid@Thinkpad nwpro]$ gcc binary_search2.c && ./a.out
+// s1732070@mv11c:~> gcc binary_search2.c && ./a.out
 // Search Number?:3
 // output: 3 is found in data[0]
-// [fid@Thinkpad nwpro]$ gcc binary_search2.c && ./a.out
+// s1732070@mv11c:~> gcc binary_search2.c && ./a.out
 // Search Number?:4
 // output: 4 is not found.

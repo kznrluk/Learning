@@ -28,7 +28,7 @@ int main(void) {
     return 0;
 }
 
-// [fid@Thinkpad nwpro]$ gcc struct2.c && ./a.out
+// s1732070@mv11c:~> gcc struct2.c && ./a.out
 // [0] Input your gakuban:000
 // [0] Input your score of kamoku1:97
 // [0] Input your score of kamoku2:64

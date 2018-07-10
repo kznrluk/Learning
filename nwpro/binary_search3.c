@@ -75,9 +75,9 @@ void output(int n, float ans){
     }
 }
 
-// [fid@Thinkpad nwpro]$ gcc binary_search3.c && ./a.out
+// s1732070@mv11c:~> gcc binary_search3.c && ./a.out
 // [binary_search3.c] Input target number:1732770
 // output: 1732770's heikin is 82.0
-// [fid@Thinkpad nwpro]$ gcc binary_search3.c && ./a.out
+// s1732070@mv11c:~> gcc binary_search3.c && ./a.out
 // [binary_search3.c] Input target number:1732000
 // output: 1732000 is not found.
