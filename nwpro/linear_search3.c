@@ -46,16 +46,16 @@ float linear(struct gakusei ns_2nen[], int n){
     int i = 0;
 
     while(1){
-        if(ns_2nen[i].gakuban == n){
-            ans = ns_2nen[i].heikin;
-            break;
-        } else if(i > 20) {
+        if(i >= 20) {
             ans = -1;
+            break;
+        } else if(ns_2nen[i].gakuban == n){
+            ans = i;
             break;
         }
         i++;
     }
-    
+
     return ans;
 }
 
