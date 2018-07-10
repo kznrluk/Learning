@@ -6,10 +6,12 @@ void output(int n, int ans);
 int main(void) {
     int data[] = {3, 9, 8, 2, 1, 4, 6, 5, 7}; 
     int size = sizeof(data) / sizeof(int);
-    int n = 7;
+    int n;
     int i, ans;
 
-    printf("%d", size);
+    printf("Search Number?:");
+    scanf("%d", &n);
+    
     ans = linear(data, size, n);
     output(n, ans);
 
@@ -30,14 +32,13 @@ int linear(int data[], int size, int n){
         }
         i++;
     }
-    printf("ANSWER %d", ans);
     return ans;
 }
 
 void output(int n, int ans){
-    if(ans > 0){
-        printf("output: %dの値はdata[%d]に格納されています。\n", n, ans);
+    if(ans == -1){
+        printf("output: %d is not found.\n", n);
     } else {
-        printf("output: %dの値は見つかりませんでした。\n", n);
+        printf("output: %d is found in data[%d]\n", n, ans);
     }
 }

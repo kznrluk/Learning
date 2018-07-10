@@ -5,10 +5,13 @@ int binary(int data[], int size, int n);
 void output(int n, int ans);
 
 int main(void) {
-    int data[] = {1,2,3,4,5,6,7,8}; 
+    int data[] = {3, 5, 6, 9, 11, 14, 16, 19, 21, 33}; 
     int size = sizeof(data) / sizeof(int);
-    int n = 8;
+    int n;
     int i, ans;
+
+    printf("Search Number?:");
+    scanf("%d", &n);
 
     ans = binary(data, size, n);
     output(n, ans);
@@ -27,25 +30,27 @@ int binary(int data[], int size, int n){
             ans = m;
             break;
         } else if (data[m] < n) {
+            if(m == left){
+                ans = -1;
+                break;
+            }
             left = m;
         } else {
+            if(m == right){
+                ans = -1;
+                break;
+            }
             right = m;
         }
-        if(count > size){
-            ans = -1;
-            break;
-        }
-        count++;
     }
 
-    printf("ANSWER %d", ans);
     return ans;
 }
 
 void output(int n, int ans){
-    if(ans > 0){
-        printf("output: %dの値はdata[%d]に格納されています。\n", n, ans);
+    if(ans == -1){
+        printf("output: %d is not found.\n", n);
     } else {
-        printf("output: %dの値は見つかりませんでした。\n", n);
+        printf("output: %d is found in data[%d]\n", n, ans);
     }
 }
