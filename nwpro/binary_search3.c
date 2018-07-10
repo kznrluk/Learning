@@ -46,25 +46,19 @@ float binary(struct gakusei ns_2nen[], int n){
     int m = 0;
     int left = 0, right = 20;
 
-    while(1){
+    while(left <= right){
         m = (right + left) / 2;
         if(ns_2nen[m].gakuban == n){
             ans = ns_2nen[m].heikin;
             break;
-        } else if (ns_2nen[m].gakuban < n) {
-            if(m == left){
-                ans = -1;
-                break;
-            }
-            left = m;
+        } else if (ns_2nen[m].gakuban <= n) {
+            left = m + 1;
         } else {
-            if(m == right){
-                ans = -1;
-                break;
-            }
-            right = m;
+            right = m - 1;
         }
     }
+
+    return ans;
 }
 
 void output(int n, float ans){
