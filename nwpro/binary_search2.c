@@ -25,8 +25,6 @@ int binary(int data[], int size, int n){
     int left = 0;
     int right = size - 1;
 
-
-    int count = 0;
     while(left <= right){
         m = (right + left) / 2;
         if(data[m] == n){
