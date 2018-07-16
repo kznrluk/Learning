@@ -82,7 +82,6 @@ void exec_bubble_sort(int data[], int size){
 
 void outputResultArrayAsCSV(int resultArray[COLUMN][NUMBER_OF_TRIALS + 1]){
     int i, j;
-    i = 0;
     printf("<=============== CSV START ===============>\n");
     // タイトルを含むため-1から開始
     for(i = -1; i < NUMBER_OF_TRIALS + 1; i++){
