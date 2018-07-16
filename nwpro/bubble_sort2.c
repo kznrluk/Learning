@@ -10,13 +10,12 @@
 #define NUMBER_OF_TRIALS 10
 
 void exec_bubble_sort(int data[], int size);
-void arrayOutput(int data[], int size);
 void outputResultArrayAsCSV(int resultArray[COLUMN][NUMBER_OF_TRIALS + 1]);
 
 int main(void){
     int resultArray[COLUMN][NUMBER_OF_TRIALS + 1];
     int amountDataIndex = 0;
-
+    printf("CLOCKS_PER_SEC = %d\n", CLOCKS_PER_SEC);
     for(amountDataIndex = 0; amountDataIndex < COLUMN; amountDataIndex++){
         int i;
 
@@ -30,7 +29,6 @@ int main(void){
 
         // 挿入するデータ量の計算
         int dataSize = (amountDataIndex + 1) * NUMBER_OF_MULTIPLIER;
-
         printf("Checking sort time with %d...\n", dataSize);
         // [NUMBER_OF_TRIALS]回計算を実行する
         for(i = 0; i < NUMBER_OF_TRIALS; i++){
@@ -49,7 +47,7 @@ int main(void){
             
             // 計算時間の出力
             resultArray[amountDataIndex][i] = elapsedTime;
-            printf("%4d", elapsedTime);
+            printf("%8d", elapsedTime);
         }
         printf("\n");
         // 平均計算時間を算出
@@ -79,16 +77,7 @@ void exec_bubble_sort(int data[], int size){
                 data[j - 1] = temp;
             }
         }
-}
-}
-
-void arrayOutput(int data[], int size){
-    int i;
-    printf("arrayOutput : ");
-    for(i = 0; i < size; i++){
-        printf("%d ", data[i]);
     }
-    printf("\n");
 }
 
 void outputResultArrayAsCSV(int resultArray[COLUMN][NUMBER_OF_TRIALS + 1]){
