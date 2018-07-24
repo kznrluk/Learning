@@ -1,12 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void insert_sort(int data[], int size);
 void arrayOutput(int data[], int size);
 
 int main(void){
-    int data[] = {12, 32, 365, 213, 432, 213, 8};
+    int data[20];
     int size = sizeof(data) / sizeof(int);
-    
+    int i;
+
+    // 乱数の生成
+    for(i = 0; i< 20; i++){
+        data[i] = rand() % 100 + 1;
+    }
+
     arrayOutput(data, size);
     insert_sort(data, size);
     arrayOutput(data, size);
