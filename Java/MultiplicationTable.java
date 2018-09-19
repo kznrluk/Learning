@@ -1,6 +1,4 @@
-import java.util.Arrays;
-
-class Multiple {
+class MultiplicationTable {
     public static void main(String args[]){
         int i,j;
         int[][] resultArray;

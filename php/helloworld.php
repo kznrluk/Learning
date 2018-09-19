@@ -11,11 +11,21 @@
     ];
 
     // 配列へのアクセス
-    echo $object['word'];
-    echo '<br>';
+    //echo $object['word'];
+    //echo '<br>';
 
     // 配列なのでアロー演算子は使用できない
     // echo $object->today;
 
     // 関数なども使える
-    echo $object['lambda_in_array'](16);
+    //echo $object['lambda_in_array'](16);
+
+    $string = 'wawawa';
+    //$number = 234;
+    //echo (string)$number ?? 'NOPE';
+    echo (string)($number ?? 'aieeee');
+    if(isnull($number)){
+        echo 'aasusahud';
+    } else {
+        echo 'kghjkhj';
+    }
